@@ -157,27 +157,91 @@ function greaterThanSecond(arr) {
 function greaterThanSecondGeneralized(arr) {
     var count = 0;
     var newArr = [];
-    if (arr.length > 0) {
+    if (arr.length > 1) {
         for (var i = 0; i <= arr.length; i++) {
             if (arr[i] > arr[1]) {
                 newArr.push(arr[i]);
                 count++;
             }
         }
+        return ("New arrary is " + newArr + " and there are " + count + " values in the new array")
     }
     else {
-        console.log("There is only one value in the arrary")
+        return("There is only one or no value in the arrary")
     }
-    return "New arrary is "+ newArr+ " and there are "+count+" values in the new array";
+}
+//This Length, That Value
+function thisLengthThatValue(num1, num2) {
+    var arr = [num1, num2]
+    if (num1 == num2) {
+        console.log("Jinx")
+    }
+    console.log(arr.length)
 }
 
+//Fit the First Value
+function fitTheFirstValue(arr) {
+    if (arr[0] > arr.length) {
+        console.log("Too Big")
+    }
+    else if (arr[0] < arr.length) {
+        console.log("Too small")
+    }
+    else {
+        console.log("Just right!")
+    }
+}
 
-//This Length, That Value
-
-
-
-//Fit the First IDBCursorWithValueFahrenheit to Celcius
-
-
+//Fahrenheit to Celcius
+function fahrenheitToCelsius(fDegrees) {
+    celsius = (fDegrees - 32) * 5 / 9
+    return celsius
+}
 
 //Celsius to Fahrenheit
+function celsiusToFahrenheit(cDegrees) {
+    fahrenheit = (cDegrees*9/5) + 32
+    return fahrenheit
+}
+
+//Page 22
+//Biggie Size
+
+
+//Print Low, Return High
+
+
+//Print One, Return Another
+
+
+//Double Visiion
+
+
+//Count Positives
+
+
+//Evens and Odds
+
+
+//Increment the Seconds
+
+
+//Previous Lengths
+
+
+//Add Seven to Most
+
+
+//Reverse Arrary
+
+
+//Outlook: Negative
+
+
+//Always HUngry
+
+
+//Swap Toward the Center
+
+
+//Scale the Arary
