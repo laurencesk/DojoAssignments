@@ -262,9 +262,21 @@ function countPositives(arr) {
 
 //Evens and Odds
 function evensAndOdss(arr) {
+    var even = 0
+    var odd = 0
     for (var i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 == 0){
-            
+
+        if (arr[i] % 2 == 0) {
+            even++
+            if (even == 3) {
+                return 'even more so'
+            }
+        }
+        if (arr[i] % 2 != 0) {
+            odd++
+            if (odd == 3) {
+                return "that's odd"
+            }
         }
     }
 }
@@ -357,3 +369,4 @@ function scaleTheArray(arr,num) {
     }
     return arr
 }
+
