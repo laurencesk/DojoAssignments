@@ -28,6 +28,14 @@
             background-size: contain;
         }
 
+        .missiles{
+            width: 2px;
+            height: 10px;
+            position: absolute;
+            background-color: gold;
+        }
+
+
     </style>
 
 </head>
@@ -36,16 +44,17 @@
     <div id="ocean">
         <div id="players"></div>
         <div id="enemies"></div>
+        <div id="missiles"></div>
     </div>
-    
-   <script>
+
+    <script>
 
         var player = {
             left: 450,
             top: 620
         }
 
-        var enemies = 
+        var enemies =
             [
                 { left: 250, top: 20 },
                 { left: 350, top: 100 },
@@ -54,44 +63,72 @@
                 { left: 650, top: 20 }
             ]
 
-        function drawPlay() {
+        var missiles = []
+        
+
+        function drawPlayer() {
             content = "<div class='player' style='left:" + player.left + "px" + "; top:" + player.top + "px" + "'></div>";
             document.getElementById('players').innerHTML = content;
         }
+        drawPlayer()
 
-        drawPlay();
 
         function drawEnemies() {
             content = ''
             for (var i = 0; i < enemies.length; i++) {
                 content += "<div class='enemies' style='left:" + enemies[i].left + "px" + "; top:" + enemies[i].top + "px" + "'></div>";
-                document.getElementById('enemies').innerHTML = content;
+            }
+            document.getElementById('enemies').innerHTML = content
+        }
+        
+        function moveEnemies() {
+            for (var i = 0; i < enemies.length; i++){
+                enemies[i].top += 5;
             }
         }
 
-        drawEnemies()
+        function drawMissiles() {
+            content = "";
+            for (var i = 0; i < missiles.length; i++) {
+                content += "<div class='missiles' style='left:" + missiles[i].left + "px; top:" + missiles[i].top + "px'></div>"
+            }
+            document.getElementById("missiles").innerHTML = content; 
+        }
 
+        function moveMissiles() {
+            for (var i = 0; i < missiles.length; i++) {
+                missiles[i].top -= 30;
+            }
+        }
 
         document.onkeydown = function(e) {
             if (e.keyCode == 37 && player.left> 20) {
                 player.left = player.left - 10;
             }
-            else if (e.keyCode == 39 && player.left < 850) {
+            if (e.keyCode == 39 && player.left < 850) {
                 player.left = player.left + 10;
             }
-            else if (e.keyCode == 40 && player.top <640) {
+            if (e.keyCode == 40 && player.top <640) {
                 player.top = player.top + 10;
             }
-            else if (e.keyCode == 38 && player.top > 450) {
+            if (e.keyCode == 38 && player.top > 450) {
                 player.top = player.top - 10;
             }
+            if (e.keyCode == 32 ) {
+                missiles.push({ left: (player.left + 34), top: (player.top - 8) })
+                drawMissiles()
 
-            drawPlay()
+            }
+            drawPlayer()
         }
 
-
-
-
+        function gameLoops() {
+            setTimeout(gameLoops, 200)
+            drawEnemies()
+            moveEnemies();
+            moveMissiles()
+        }
+        gameLoops()
 
     </script>
 
