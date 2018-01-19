@@ -106,20 +106,28 @@
 
     <script type="text/javascript">
 
-        var grid = [
-            [0, 0, 0, 0, 0],
-            [0, 2, 1, 1, 0],
-            [0, 1, 0, 1, 0],
-            [0, 1, 1, 1, 0],
-            [0, 0, 1, 1, 0],
-            [0, 1, 0, 1, 0],
-            [0, 1, 1, 1, 0],
-            [0, 1, 1, 0, 0],
-            [0, 0, 1, 1, 0],
-            [0, 0, 0, 0, 0]
-        ];
-
         var dic = { 0: "wall", 1: "sushi", 2: "blank" }
+
+        function getRandom(min, max) {
+            return Math.round(Math.random() * (max - min) + min);
+        };
+        var gridVar = getRandom(1, 2)
+
+        console.log(gridVar)
+
+        var grid = [
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 2, gridVar, gridVar, gridVar, gridVar, gridVar, 0],
+            [0, 1, 0, 1, 1, 2, 1, 0],
+            [0, 1, 1, 1, 1, 2, 1, 0],
+            [0, 0, 1, 1, 1, 2, 1, 0],
+            [0, 1, 0, 1, 1, 2, 1, 0],
+            [0, 1, 1, 1, 1, 2, 1, 0],
+            [0, 1, 1, 0, 1, 2, 1, 0],
+            [0, 0, 1, 1, 1, 2, 1, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0]
+        ];        
+
 
         function drawGrid() {
             var output = "";
@@ -143,7 +151,7 @@
             document.getElementById("ninja").style.top = coord.y*40+"px";
             document.getElementById("ninja").style.left = coord.x*40+"px"
         }
-        
+
         document.onkeydown = function (e) {
             if (e.keyCode == 37 && grid[coord.y][coord.x-1]!=0){
                 coord.x--;
@@ -158,11 +166,10 @@
                 coord.y++;
             }
 
-            if (){
-
-            }
-
+            grid[coord.y][coord.x] = 2
             ninjaMove()
+            drawGrid()
+            
         }
 
     </script>
