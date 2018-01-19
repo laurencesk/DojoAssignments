@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Airplane</title>
+    <style type="text/css">
+        #ocean {
+            background-image: url("img/dessert.jpg");
+            width: 900px;
+            height: 700px;
+            background-size: contain;
+        }
+
+        .player {
+            background-image: url("img/bee.png");
+            width: 50px;
+            height: 68px;
+            position: absolute;
+            background-size: contain;
+        }
+
+        .enemies {
+            background-image: url("img/ufo.png");
+            width: 70px;
+            height: 75px;
+            position: absolute;
+            background-size: contain;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="ocean">
+        <div id="players"></div>
+        <div id="enemies"></div>
+    </div>
+    
+   <script>
+
+        var player = {
+            left: 450,
+            top: 620
+        }
+
+        var enemies = 
+            [
+                { left: 250, top: 20 },
+                { left: 350, top: 100 },
+                { left: 450, top: 20 },
+                { left: 550, top: 100 },
+                { left: 650, top: 20 }
+            ]
+
+        function drawPlay() {
+            content = "<div class='player' style='left:" + player.left + "px" + "; top:" + player.top + "px" + "'></div>";
+            document.getElementById('players').innerHTML = content;
+        }
+
+        drawPlay();
+
+        function drawEnemies() {
+            content = ''
+            for (var i = 0; i < enemies.length; i++) {
+                content += "<div class='enemies' style='left:" + enemies[i].left + "px" + "; top:" + enemies[i].top + "px" + "'></div>";
+                document.getElementById('enemies').innerHTML = content;
+            }
+        }
+
+        drawEnemies()
+
+
+        document.onkeydown = function(e) {
+            if (e.keyCode == 37 && player.left> 20) {
+                player.left = player.left - 10;
+            }
+            else if (e.keyCode == 39 && player.left < 850) {
+                player.left = player.left + 10;
+            }
+            else if (e.keyCode == 40) {
+                player.top = player.top + 10;
+            }
+            else if (e.keyCode == 38 && player.top > 450) {
+                player.top = player.top - 10;
+            }
+
+            drawPlay()
+        }
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
