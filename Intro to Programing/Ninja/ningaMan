@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ninja Man</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            letter-spacing: -1em;
+        }
+
+        .row {
+            line-height: 0;
+            padding: 0;
+            margin: 0;
+        }
+
+        .wall {
+            background-color: blue;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            line-height: 0;
+            padding: 0;
+            margin: 0;
+        }
+
+        #ninja {
+            background-image: url("img/ninja.gif");
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            background-size: contain;
+            position: absolute;
+            left: 40px;
+            top: 40px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sushi {
+            background-image: url("img/sushi.png");
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            background-size: contain;
+            padding: 0;
+            margin: 0;
+        }
+
+        .blank {
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            background-size: contain;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="grid">
+        <!--<div class="row">
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+        </div>
+        <div class="row">
+            <div class="wall"></div>
+            <div class="blank"></div>
+            <div class="sushi"></div>
+            <div class="sushi"></div>
+            <div class="wall"></div>
+        </div>
+        <div class="row">
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+        </div>
+        <div class="row">
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+        </div>
+        <div class="row">
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+        </div>-->
+    </div>
+    <div id="ninja"></div>
+
+    <script type="text/javascript">
+
+        var grid = [
+            [0, 0, 0, 0, 0],
+            [0, 2, 1, 1, 0],
+            [0, 1, 0, 1, 0],
+            [0, 1, 1, 1, 0],
+            [0, 0, 0, 0, 0]
+        ];
+
+        var dic = { 0: "wall", 1: "sushi", 2: "blank" }
+
+        function drawGrid() {
+            var output = "";
+            for (var row = 0; row < grid.length; row++) {
+                output += "<div class='row'>"
+                for (var col = 0; col < grid[row].length; col++) {
+                    output += " <div class='" + dic[grid[row][col]] + "'></div>"
+                }
+            }
+            document.getElementById('grid').innerHTML = output;
+        }
+
+        drawGrid()
+
+        function move(e) {
+
+
+
+        }
+
+
+    </script>
+
+
+</body>
+
+
+
+</html>
