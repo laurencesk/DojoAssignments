@@ -1,0 +1,81 @@
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop
+$ rm destination
+rm: cannot remove 'destination': Is a directory
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop
+$ rm -r destination
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop
+$ ls
+'Accounts .xlsx'                         index_2.html
+'American Express Savings Account.pdf'   LINE.lnk*
+ Atom.lnk*                              'Master Product List 012118.xlsx'
+ CD_Syllabus.pdf                         Mattermost.lnk*
+'Coding Dojo'/                           MT/
+ desktop.ini                             SMC/
+ ExcelHacks-01.xlsx                      test/
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop
+$ ^C
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop
+$ clear
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop
+$ mkdir test
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop
+$ cd test
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/test
+$ touch index.html styles.css commands.txt
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/test
+$ cp index.html index_2.html
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/test
+$ rm styles.css
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/test
+$ cd ..
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop
+$ mkdir destination
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop
+$ cd test
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/test
+$ mv index_2.html ..destination/index_2.html
+mv: cannot move 'index_2.html' to '..destination/index_2.html': No such file or directory
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/test
+$ mv index_2.html ../destination/index_2.html
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/test
+$ ls
+commands.txt  index.html
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/test
+$ cd ..
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop
+$ cd destination
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/destination
+$ ls
+index_2.html
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/destination
+$ rm -r destination
+rm: cannot remove 'destination': No such file or directory
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/destination
+$ cd ..
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop
+$ rm -r destination
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop
+$
