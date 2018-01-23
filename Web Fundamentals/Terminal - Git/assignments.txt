@@ -1,0 +1,103 @@
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop
+$ cd destination
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/destination
+$ ls
+index_2.html
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/destination
+$ rm -r destination
+rm: cannot remove 'destination': No such file or directory
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/destination
+$ cd ..
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop
+$ rm -r destination
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop
+$ ^C
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop
+$ clear
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop
+$ mkdir DojoAssignments
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop
+$ cd DojoAssignments
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments
+$ mkdir WebFundamentals Python MEAN Ruby iOS netCore
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments
+$ ls
+iOS/  MEAN/  netCore/  Python/  Ruby/  WebFundamentals/
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments
+$ cd iOS
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments/iOS
+$ touch about.txt
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments/iOS
+$ cp about.txt ../MEAN/about.txt
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments/iOS
+$ cp about.txt ../netCore/about.txt
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments/iOS
+$ cp about.txt ../Python/about.txt
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments/iOS
+$ cp about.txt ../Ruby/about.txt
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments/iOS
+$ cp about.txt ../WebFundamentals/about.txt
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments/iOS
+$ cd ..
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments
+$ cd WebFundamentals
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments/WebFundamentals
+$ mkdir Git HTML CSS Javascript
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments/WebFundamentals
+$ cd Git
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments/WebFundamentals/Git
+$ touch about.txt
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments/WebFundamentals/Git
+$ cp about.txt ../WebFundamentals/about.txt
+cp: cannot create regular file '../WebFundamentals/about.txt': No such file or directory
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments/WebFundamentals/Git
+$ cp about.txt ../HTML/about.txt
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments/WebFundamentals/Git
+$ cp about.txt ../CSS/about.txt
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments/WebFundamentals/Git
+$ cp about.txt ../Javascript/about.txt
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments/WebFundamentals/Git
+$ cd ..
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments/WebFundamentals
+$ cd HTML
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments/WebFundamentals/HTML
+$ touch indentation.html
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments/WebFundamentals/HTML
+$ cd ..
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments/WebFundamentals
+$ cd ..
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/DojoAssignments
+$
