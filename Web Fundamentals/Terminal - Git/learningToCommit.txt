@@ -1,0 +1,67 @@
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~
+$ pwd
+/c/Users/laure
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~
+$ cd Desktop
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop (master)
+$ mkdir gittest
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop (master)
+$ cd gittest
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/gittest (master)
+$ git init
+Initialized empty Git repository in C:/Users/laure/Desktop/gittest/.git/
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/gittest (master)
+$ touch index.html styles.css aboutMe.txt
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/gittest (master)
+$ git add .
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/gittest (master)
+$ git commit -m"Initial Commit"
+[master (root-commit) ce3761a] Initial Commit
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 aboutMe.txt
+ create mode 100644 index.html
+ create mode 100644 styles.css
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/gittest (master)
+$ git add aboutMe.txt
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/gittest (master)
+$ git commit -m"Added favorite movie"
+[master 02f1259] Added favorite movie
+ 1 file changed, 3 insertions(+)
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/gittest (master)
+$ git log
+commit 02f12598d59ffdb9711e3a45ba18158e1d2d460a (HEAD -> master)
+Author: laurencesk <laurencesk@gmail.com>
+Date:   Mon Jan 22 17:44:20 2018 -0800
+
+    Added favorite movie
+
+commit ce3761a04d0acae6c3f482b26d15b27b4b07cb4e
+Author: laurencesk <laurencesk@gmail.com>
+Date:   Mon Jan 22 17:43:10 2018 -0800
+
+    Initial Commit
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/gittest (master)
+$ git revert -n Head
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/gittest (master|REVERTING)
+$ git add aboutMe.txt
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/gittest (master|REVERTING)
+$ git commit -m"added my favorite book, removed favorite movie"
+[master 954db91] added my favorite book, removed favorite movie
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+laure@LAPTOP-3BS7IMCB MINGW64 ~/Desktop/gittest (master)
+$
