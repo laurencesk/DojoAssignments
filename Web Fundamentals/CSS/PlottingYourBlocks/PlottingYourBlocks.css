@@ -8,13 +8,24 @@
  height: 600px;
  background-color: silver;
  margin: 10px auto;
- padding: 15px;
+ padding: 10px;
 }
+
 #header{
  height: 150px;
  background-color: green;
- margin-bottom: 15px;
+ margin: 10px;
 }
+
+#wrapper2{
+
+}
+.wrapper2Left{
+  display: inline-block;
+  margin: 10px;
+
+}
+
 #navigation{
  height: 300px;
  width: 200px;
@@ -22,11 +33,17 @@
  display: inline-block;
 
 }
+
+.wrapper2Right{
+display: inline-block;
+position: absolute;
+margin: 10px;
+}
+
 #main_content{
  height: 400px;
- width: 720px;
+ width: 710px;
  background-color: red;
- float: right;
  display: inline-block;
 }
 .subcontents{
