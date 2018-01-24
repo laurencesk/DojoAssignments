@@ -1,0 +1,147 @@
+#container{
+  width: 1000px;
+  background-color: #6f5964;
+  height: 1020px;
+  margin: auto;
+  display: inline-block;
+}
+
+#firstRow{
+  width: 1000px;
+  background-color: rgb(253,253,253);
+  display: inline-block;
+
+}
+
+#name{
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  font: 15px arial, sans-serif;
+}
+
+#slogan{
+  display: inline-block;
+  margin-left: 500px;
+}
+
+#secondRow{
+  width: 1000px;
+  height: 350px;
+  display: inline-block;
+
+}
+
+#picture{
+  display: inline-block;
+  width:450px;
+  height: 350px;
+}
+
+#image{
+  border: 5px solid #c0c0c0;
+  margin: 20px;
+}
+
+#aboutFrame{
+  display: inline-block;
+  background-color: #6f5964;
+  width:546px;
+  height: 350px;
+  vertical-align: top;
+}
+
+#about{
+  display: inline-block;
+  width: 500px;
+  height: 310px;
+  margin: 20px;
+  background-color: rgb(253,253,253);
+  }
+
+#aboutMeTitle{
+background-color: #a5a4ab;
+width:500px;
+height: 50px;
+display: inline-block;
+}
+
+#aboutMeTitle h3 {
+    margin-left: 20px;
+    width:500px;
+    color: white;
+}
+
+#aboutMeContent{
+  margin: 10px;
+}
+
+#aboutMeContent span{
+  text-decoration: underline;
+}
+
+#thirdRow{
+  width: 1000px;
+  display: inline-block;
+}
+
+
+.thirdRowBody{
+background-color: #e1d5e1;
+display: inline-block;
+width: 310px;
+height: 570px;
+margin: 10px;
+}
+
+.thirdRowTopHeader{
+  background-color: #a5a4ab;
+  width:310px;
+  height: 50px;
+  display: inline-block;
+}
+.thirdRowTopHeader h3{
+  color: white;
+  margin: 10px;
+}
+
+.thirdRowTopContent p{
+margin: 10px;
+}
+
+.thirdRowBottomHeader{
+  background-color: #a5a4ab;
+  width:310px;
+  height: 30px;
+  display: inline-block;
+}
+
+.thirdRowBottomHeader h3{
+  color: white;
+  margin: 10px;
+  line-height: 15px;
+
+}
+
+.thirdRowBottomContent{
+height: 180px;
+}
+
+.thirdRowBottomContent img{
+margin: 9px;
+}
+
+#button{
+  width: 120px;
+  height: 30px;
+  background-color: green;
+  display: inline-block;
+  border-radius: 15px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+  margin: 10px;
+  display: block;
+  margin-left: 100px;
+}
