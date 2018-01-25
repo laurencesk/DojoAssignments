@@ -2,53 +2,81 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="gitBlocks.css">
-    <title></title>
+    <title>Internet</title>
+    <link rel="stylesheet" href="internet.css">
   </head>
   <body>
-    <div id="container">
-        <div id="wrapper">
+      <div id="container">
+          <div id="top">
+              <div id="header">
+                  <img src="img/globe.png" alt="lgoo" height="100px" width="100px">
+                  <h2>The Inter<span>net</span></h2>
+              </div>
+              <div id="banner">
+                  <h3>The World Wide Web</h3>
+              </div>
+              <div id="top3">
+                  <div id="top3Left">
+                      <h3>So,what's an <span id="redSpan">Internet?</span></h3><br><br>
+                      <h4>An <span id="blueSpan">Inter</span>connected <span id="blueSpan"> Net</span>work of computers all around the world!</h4>
+                      <div id="watchAVideo"><h2>WATCH A VIDEO</h2> </div>
+                      <div id="moreResources"><h2>MORE RESOURCES</h2></div>
+                      <hr>
+                  </div>
+                  <div id="top3Right">
+                      <div id="info">
+                          <div id="dns">
+                              <img class="home" src="img/home.png" alt="dns" height="25px;">
+                              <h3>DNS</h3>
+                          </div>
+                          <img class="phone" src="img/phone.png" alt="contact" height="50px">
+                          <div id="contact">
+                              <h5>Mon - Fri 9 a.m. - 5 p.m. (ETS)</h5>
+                              <h3>855.967.3787</h3>
+                              <h5>International +1 617.963.0555</h5>
+                          </div>
+                          </div>
+                          <div id="clientAndService">
+                              <h3>Clients and Services</h3>
+                              <h4>Computers connected to the <span>Web</span>are called <span>clients</span>and <span>servers.</span></h4>
+                              <ul>
+                                <li> <span>Clients</span>are the typical Web user's internet-connnected devices(for example, your computer connected toyour WI-FI, or your phone connected to your mobile network) and <span>Web-accessing software</span>available on those devices(usually a web broser like FIrefox or CHrome).</li>
+                                <li> <span>Servers</span>are computers that store <span>webpages, sites</span>or <span>apps.</span>WHen a client device wants to access a webpage, a copy of the webpage is downloaded from the server onto the client machine to be displayed in the user's web brownser.</li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div id="left">
+                <img id="ads" src="img/ad_background.png" alt="ads">
+                <h2>Reinvent your career in just 14 weeks</h2>
+                <img id="ninja" src="img/ninja.png" alt="ninja">
 
-            <div id="header">
-                <img src="img/github-icon.png" alt="">
-                <h2>Git Basics</h2>
-                <div id="bannerText">
-                    <h3>What is git?</h3>
-                    <h3>What is Github?</h3>
-                    <h3>How do you use git and Github</h3>
-                    <h3>More resources</h3>
+                <div id="learnMore">
+                    <h3>Learn More <span>>>></span></h3>
                 </div>
-            </div>
-            <div id="content">
-                <div id="left">
-                    <h2>What is Git?</h2>
-                    <br>
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.
-</h3>
-<br>
-                    <h2>What is GitHub?</h2>
-                    <br>
-                    <h3>Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum.
-</h3>
-                </div>
-                <div id="rightTop">
 
-                </div>
-                <div id="rightMiddle">
 
-                </div>
-                <div id="rightBottom">
+              </div>
+              <div id="right">
+                  <img src="img/client_server.jpg" alt="client_server">
+                  <h3>So What Actualy Happens?</h3>
+                  <ol>
+                    <li>The broser goes to the <span>DNS server</span> and finds the real addres of the <span>server</span>that the website lives on. </li>
+                    <li>The browser sends an <span>HTTP request</span>message to the server asking it to sent a copy of the website to the client.</li>
+                    <li>If the server approves the client's request, the server sends the client a <span>"200 OK" message</span>,which means "Permission granted! Here you go!", and then starts sending the website's files to the broser as a series of small chunks</li>
+                    <li>The broser assembles the samll chunks into a complete website and displays it to you!</li>
+                  </ol>
+                  <div id="theBig3">
+                      <img src="img/html.png" alt="theBig3" height="120px">
+                      <div class="text">
+                          <h3>The Big 3 - HTML, CSS, JavaScript</h3>
+                          <h5>While the server can process information in many different languages, the files that they serve to the client are always going to be some combination of HTML, CSS, and JavaScript!</h5>
+                          <h5>Learn more about the Big 3 <span>here!</span></h5>
+                      </div>
+                  </div>
+              </div>
 
-                </div>
-
-            </div>
-
-            <div id="footer">
-              <h3>You can learn about Git and Github here: <span>Github Guides</span> </h3>
-            </div>
-
-        </div>
-
-    </div>
+          </div>
   </body>
 </html>
