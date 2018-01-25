@@ -1,145 +1,374 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
+* {
 	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+	}
+
+#container{
+width: 1200px;
+height: 1000px;
+margin: 0 auto;
 }
 
-#container {
-  margin: 0 auto;
-  background-color: #dbdfd3;
-  width: 1200px;
-  height: 1000px;
+#top{
+  display: inline-block;
 }
-
-#wrapper{
-  width: 1160px;
-  height: 900px;
-  padding: 15px;
-  }
 
 #header{
-  width: 1160px;
-  height: 80px;
-  background-color: #47afab;
-
+  width: 1200px;
+  height: 90px;
+  display: inline-block;
+  margin-bottom: -10px;
 }
 
-img[src="img/github-icon.png"]{
-  display: inline-block;
-  height: 70px;
-  width: 70px;
-  line-height: 80px;
-  vertical-align: middle;
-  margin: 5px;
+#header img {
+  margin: 0 5px;
 }
 
 #header h2{
   display: inline-block;
-  font-size: 42px;
-  vertical-align: middle;
-  margin-left: 10px;
+  font-size: 48px;
+  line-height: 100px;
+  font-family: sans-serif;
+  vertical-align: top;
+  color: #4a4a4a
 }
 
-#bannerText{
+#header span{
   display: inline-block;
-  margin-left: 80px;
+  font-size: 48px;
+  line-height: 100px;
+  font-family: sans-serif;
+  vertical-align: top;
+  color: #2b6ba2
 }
 
-#header h3{
-  display: inline-block;
-  font-size: 24px;
-  vertical-align: middle;
-  margin-left: 10px;
+#banner{
+  background: linear-gradient(#2e6ca1, #4d80ab, #2e6ca1);
+height: 60px;
+}
+
+#banner h3{
   color: white;
-  text-decoration: underline;
+  font-family: sans-serif;
+  font-size: 34px;
+  line-height: 60px;
+  margin-left: 20px;
+  margin-top: -20px;
 }
 
-#content{
-margin-top: 10px;
-background-color: #f6e992;
-width: 1160px;
-height: 790px;
+#top3{
+  width: 1200px;
+  height: 270px;
+  background: linear-gradient(#e3e3e3, #f4f4f4, white);
 }
+
+#top3Left{
+width: 300px;
+padding-top: 20px;
+height: 280px;
+display: inline-block;
+}
+
+#top3Left h3{
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: bold;
+  display: inline-block;
+}
+
+#top3Left h4{
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: bold;
+  display: inline-block;
+}
+
+#redSpan{
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: red;
+  display: inline-block;
+}
+
+#blueSpan{
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #2e6ca1;
+  display: inline-block;
+}
+
+#watchAVideo{
+  background-color: #2e6ca1;
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 20px;
+  height: 40px;
+  border-radius: 5px;
+  color: white;
+  line-height: 40px;
+  text-align: center;
+  font-family: sans-serif;
+  box-shadow: 2px 2px grey;
+
+}
+
+#moreResources{
+  background-color: orange;
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 5px;
+  height: 40px;
+  border-radius: 5px;
+  color: white;
+  line-height: 40px;
+  text-align: center;
+  font-family: sans-serif;
+  box-shadow: 2px 2px grey;
+}
+
+hr {
+    margin-top: 30px;
+    display: block;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    color: grey;
+    width: 280px;
+}
+
+
+#top3Right{
+  width: 896px;
+  height: 300px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#dns{
+  display: inline-block;
+  vertical-align:top;
+}
+
+#info{
+height: 80px;
+width: 896px;
+display: inline-block;
+vertical-align:top;
+}
+
+#dns{
+  vertical-align:middle;
+  margin-left: 20px;
+}
+
+#dns h3{
+  display: inline-block;
+  color: #4077a7;
+  font-weight: bold;
+}
+
+img.home{
+  display: inline-block;
+}
+
+#contact{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align:middle;
+    height: 60px;
+    margin-top: 5px;
+  }
+
+img.phone{
+    display: inline-block;
+    margin-left: 550px;
+    vertical-align:middle;
+  }
+
+#contact h5{
+  font-size: 12px;
+  font-family: sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align:middle;
+
+}
+
+#contact h3{
+font-size: 30px;
+font-family: sans-serif;
+font-weight: bold;
+color: #00BFFF;
+vertical-align:middle;
+}
+
+#clientAndService{
+margin-left: 30px;
+display: inline-block;
+width: 800px;
+height: 220px;
+}
+
+#clientAndService h3{
+font-size: 24px;
+font-weight: bold;
+color: #4077a7;
+display: inline-block;
+
+}
+
+#clientAndService h4{
+font-size: 18px;
+color:black;
+line-height: 25px;
+display: inline-block;
+}
+
+#clientAndService span{
+  color:#00BFFF;
+  display: inline-block;
+}
+
+#clientAndService ul li{
+  line-height: 25px;
+  display: inline-block;
+}
+
+
 
 #left{
-margin-top: 10px;
-background-color:#204145;
-width: 250px;
-height: 750px;
+display: inline-block;
+width: 300px;
+height: 400px;
+margin: 0 auto;
+
+}
+
+img[src="img/ninja.png"]{
+  margin: 0 auto;
+  display: block;
+  width: 100px;
+  position: relative;
+  top: -380px;}
+
+img[src="img/ad_background.png"]{
+  display: block;
+  width: 280px;
+  margin: auto;
 }
 
 #left h2{
-  color: white;
-  margin-left: 10px;
-  font-size: 25px;
+color: white;
+font-size: 30px;
+font-weight: bold;
+width: 250px;
+margin: 0 auto;
+text-align: center;
+position: relative;
+top: -370px;
 }
 
-#left h3{
+#learnMore{
+  background-color: #00BFFF;
+  width:240px;
+  height: 35px;
+  margin: 0 auto;
+  border-radius: 5px;
+  position: relative;
+  top: -340px;
+}
+
+#learnMore h3{
   color: white;
-  margin: 15px;
+  width:150px;
+  height: 35px;
+  margin: 0 auto;
+  line-height: 35px;
   font-size: 18px;
-  line-height: 20px;
-}
-
-
-#footer{
-  margin-top: 10px;
-  width: 1160px;
-  height: 80px;
-  background-color: #47afab;
-}
-
-#footer h3{
-  color: black;
-  font-size: 20px;
   text-align: center;
-  line-height: 80px;
 }
 
-#footer span{
-  color: purple;
-  text-decoration: underline;
+#learnMore span{
+font-size: 12px;
+}
+
+#right{
+display: inline-block;
+width: 830px;
+height: 500px;
+margin: 0 30px;
+vertical-align: top;
+}
+
+img[src="img/client_server.jpg"]{
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+#right h3{
+font-size: 24px;
+color: #2b6ba2;
+font-weight: bold;
+}
+
+#right ol li{
+  margin: 0 30px;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+#theBig3{
+margin-top: 15px;
+width: 800px;
+height: 170px;
+border-top: 5px solid #2b6ba2;
+border-right: 5px solid #2b6ba2;
+border-left: 5px solid #2b6ba2;
+}
+
+img[src="img/html.png"]{
+  margin: 30px;
+  display: inline-block;
+}
+
+#theBig3 h3{
+color: #2b6ba2;
+display: inline-block;
+vertical-align: top;
+margin-top: 10px;
+}
+
+#theBig3 h5{
+margin-top: 10px;
+color: black;
+display: inline-block;
+vertical-align: top;
+width: 600px;
+line-height: 25px;
+font-size: 18px;
+}
+
+#theBig3 span{
+color: #2b6ba2;
+display: inline-block;
+vertical-align: top;
+}
+
+#theBig3 .text{
+	display: inline-block;
+	width: 600px;
+	vertical-align: top;
 }
