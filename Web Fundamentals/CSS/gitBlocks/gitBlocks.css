@@ -1,0 +1,145 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#container {
+  margin: 0 auto;
+  background-color: #dbdfd3;
+  width: 1200px;
+  height: 1000px;
+}
+
+#wrapper{
+  width: 1160px;
+  height: 900px;
+  padding: 15px;
+  }
+
+#header{
+  width: 1160px;
+  height: 80px;
+  background-color: #47afab;
+
+}
+
+img[src="img/github-icon.png"]{
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  line-height: 80px;
+  vertical-align: middle;
+  margin: 5px;
+}
+
+#header h2{
+  display: inline-block;
+  font-size: 42px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+#bannerText{
+  display: inline-block;
+  margin-left: 80px;
+}
+
+#header h3{
+  display: inline-block;
+  font-size: 24px;
+  vertical-align: middle;
+  margin-left: 10px;
+  color: white;
+  text-decoration: underline;
+}
+
+#content{
+margin-top: 10px;
+background-color: #f6e992;
+width: 1160px;
+height: 790px;
+}
+
+#left{
+margin-top: 10px;
+background-color:#204145;
+width: 250px;
+height: 750px;
+}
+
+#left h2{
+  color: white;
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+#left h3{
+  color: white;
+  margin: 15px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+
+#footer{
+  margin-top: 10px;
+  width: 1160px;
+  height: 80px;
+  background-color: #47afab;
+}
+
+#footer h3{
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  line-height: 80px;
+}
+
+#footer span{
+  color: purple;
+  text-decoration: underline;
+}
