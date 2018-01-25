@@ -1,0 +1,91 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, form, fieldset, input, textarea, p, blockquote, th, td {
+	padding: 0;
+	margin: 0;
+	}
+fieldset, img {
+	border: 0;
+	}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	}
+ol, ul {
+	list-style: none;
+	}
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-weight: normal;
+	font-style: normal;
+	}
+caption, th {
+	text-align: left;
+	}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	font-size: 100%;
+	}
+q:before, q:after {
+	content: '';
+	}
+abbr, acronym {
+	border: 0;
+	}
+
+#container{
+width: 800px;
+height: 750px;
+background-color: #d5d2ae;
+margin: 0 auto;
+}
+
+#header{
+  width: 560px;
+  height: 100px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 20px;
+}
+
+img[src="img/github.jpg"]{
+  width: 100px;
+  height: 80px;
+  display: inline-block;
+}
+
+#header h1{
+  display: inline-block;
+  font-size: 42px;
+  color: black;
+  text-align: center;
+  vertical-align: bottom;
+  font-weight: bold;
+}
+
+img[src="img/catandninja.png"]{
+  width: 100px;
+  height: 80px;
+  display: inline-block;
+}
+
+#content{
+  width: 750px;
+  height: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#content img{
+width: 120px;
+height: 120px;
+padding: 10px;
+border: 3px solid black;
+}
+
+#content .odd{
+  background-color: #82b4ee;
+}
+
+#content .even{
+  background-color: #f36870;
+}
