@@ -98,18 +98,18 @@ img[src="img/github-icon.png"]{
 }
 
 #content h2{
-		font-size: 28px;
+		font-size: 30px;
 		color: white;
-		margin: 10px;
+		margin: 20px;
 		display: inline-block;
 		vertical-align: top;
 
 }
 
 #content h3{
-		font-size: 20px;
+		font-size: 18px;
 		color: white;
-		margin: 20px;
+		margin: 30px;
 		display: inline-block;
 		vertical-align: top;
 
@@ -125,7 +125,7 @@ img[src="img/github-icon.png"]{
 }
 
 #content h5{
-		font-size: 22px;
+		font-size: 18px;
 		color: white;
 		margin: 10px;
 		display: inline-block;
@@ -145,31 +145,31 @@ span{
 }
 
 #right .rightSmall{
-	width: 247px;
-	height: 224px;
+	width: 237px;
+	height: 220px;
 	background-color:#153f43;
 	display: inline-block;
-	margin-bottom: 10px;
-	margin-right: 10px;
+	margin-bottom: 20px;
+	margin-right: 20px;
 
 }
 
 #right .rightMiddle{
-	width: 377px;
-	height: 224px;
+	width: 367px;
+	height: 220px;
 	background-color:#153f43;
 	display: inline-block;
-	margin-bottom: 10px;
-	margin-right: 10px;
+	margin-bottom: 20px;
+	margin-right: 20px;
 
 }
 
 #right .rightLarge{
-	width: 770px;
-	height: 224px;
+	width: 760px;
+	height: 220px;
 	background-color:#153f43;
 	display: inline-block;
-	margin-right: 10px;
+	margin-right: 20px;
 }
 
 
