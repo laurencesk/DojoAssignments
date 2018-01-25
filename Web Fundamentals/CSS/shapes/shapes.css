@@ -1,0 +1,81 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, form, fieldset, input, textarea, p, blockquote, th, td {
+	padding: 0;
+	margin: 0;
+	}
+fieldset, img {
+	border: 0;
+	}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	}
+ol, ul {
+	list-style: none;
+	}
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-weight: normal;
+	font-style: normal;
+	}
+caption, th {
+	text-align: left;
+	}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	font-size: 100%;
+	}
+q:before, q:after {
+	content: '';
+	}
+abbr, acronym {
+	border: 0;
+	}
+
+#container{
+  margin: 10px;
+}
+
+#container h2{
+   font-size: 20px;
+   font-weight: bold;
+   margin-top: 10px;
+   margin-bottom: 10px;
+  }
+
+#square{
+width: 140px;
+height: 140px;
+background: blue;
+}
+
+#circle{
+width: 140px;
+height: 140px;
+background: blue;
+border-radius: 100px;
+}
+
+#upTriangle{
+width: 0;
+border-left: 70px solid transparent;
+border-right: 70px solid transparent;
+border-bottom: 140px solid blue;
+
+}
+
+#pacman{
+  width: 140px;
+  height: 140px;
+  background: blue;
+  border-radius: 100px;
+
+}
+
+#pacman2{
+  width: 140px;
+  height: 140px;
+  background: white;
+  margin: 95px;
+  transform: rotate(45deg);
+  margin-top: -137px;
+}
