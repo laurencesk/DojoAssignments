@@ -1,23 +1,41 @@
-function randomChance(qtr,leave){
+randomChance()
+function randomChance(){
 
-    var coin = Math.floor(Math.random()*50)+50
-    var winning = Math.floor(Math.random()*50)+50
+    var qtr = prompt("How many coins do you want to put in?")
+    var leave = prompt("With how many coins left would you like to quit?")
+    var coin = 0;
+    var winning = 0;
+    var con ='yes';
 
-    while(qtr != leave && qtr >0){
-    if(qtr == leave){
-      console.log("You have cashed out, goodbye!")
-      break;
-    }
-    else if (qtr ==0) {
-        console.log("No money, get out!")
-        break;
-    }
-    else if (winning == 1) {
+    while(qtr != leave && qtr > 0 && con == 'yes'){
+
+        var coin = Math.floor(Math.random()*100)
+        var winning = Math.floor(Math.random()*100)
+
+        if(qtr == leave){
+          console.log("You have cashed out, goodbye!")
+          break;
+        }
+
+        else if (qtr == 0) {
+          console.log("You hava no money, get out!")
+          break;
+        }
+
+        else if(winning != 1){
+          qtr--
+          console.log("You did not win")
+          console.log("You have "+qtr+" coins")
+
+        }
+
+        else if (winning == 1) {
           qtr += coin
-    }
-    else {
-        qtr
-    }
-    console.log("You have "+qtr+" left")
+          console.log("Congradulations, You just won "+coin+" coins")
+          console.log("You now have "+qtr+" coins")
+        }
+
+        con = prompt("Would you like to continue?*'yes' to continue; 'no' to quit")
   }
 }
+
