@@ -1,0 +1,23 @@
+function randomChance(qtr,leave){
+
+    var coin = Math.floor(Math.random()*50)+50
+    var winning = Math.floor(Math.random()*50)+50
+
+    while(qtr != leave && qtr >0){
+    if(qtr == leave){
+      console.log("You have cashed out, goodbye!")
+      break;
+    }
+    else if (qtr ==0) {
+        console.log("No money, get out!")
+        break;
+    }
+    else if (winning == 1) {
+          qtr += coin
+    }
+    else {
+        qtr
+    }
+    console.log("You have "+qtr+" left")
+  }
+}
