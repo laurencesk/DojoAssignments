@@ -10,22 +10,23 @@ function numbersOnly(arr){
 
 
 function numbersOnlyInline(arr){
-    var count = 0;
-    for(var i=0; i < arr.length; i++){
+    for(var i=0; i<arr.length; i++){
         if(typeof(arr[i]) !=="number"){
-            for(var j = i+1; j < arr.length; j++ ){
-                if(typeof(arr[j]) =='number'){
-                  temp = arr[j]
-                  arr[j] = arr[i]
-                  arr[i] = temp
-                  count++
-                  break
-                }
+            for(var j = i; j<arr.length; j++){
+              if(typeof(arr[j+1]) ==="number"){
+                var temp = arr[j+1]
+                arr[j+1] = arr[i]
+                arr[i] = temp
+                break
+              }
+
             }
         }
     }
-    for(var i = 1; i<count; i++){
-      arr.pop()
+    for(var k = arr.length-1; k>=0; k--){
+        if(typeof(arr[k]) !=="number"){
+          arr.pop()
+        }
     }
-      return arr;
+    return arr;
 }
