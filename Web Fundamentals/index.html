@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQeury Functions</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $("document").ready(function(){
+
+
+
+            $("button[name ='hide']").click(function(){
+              $( ".yes" ).hide();
+            })
+
+            $("button[name ='show']").click(function(){
+              $( ".yes" ).show();
+            })
+
+            $(".toggle").click(function(){
+                $(".toggle").toggle()
+            })
+
+            $('#slideDown').click(function(){
+                  $(".slidesYellow").slideDown("slow")
+              }
+            )
+
+            $('#slideUp').click(function(){
+                $(".slidesYellow").slideUp()
+              }
+            )
+
+            $('#slideToggle').click(function(){
+                $(".slidesYellow").toggle()
+                $(".slidesGreen").toggle()
+              })
+
+                $('#fadeInButton').click(function(){
+                    $("#fadeInOutText").hide().fadeIn("10000")
+
+                })
+
+                $('#fadeOutButton').click(function(){
+                    $("#fadeInOutText").hide().fadeOut("10000")
+
+                })
+
+            $("#addClass").addClass("selected")
+
+            $("#beforeAfter").before("Hello")
+
+            $("#beforeAfter").after("Goodbye")
+
+            $("#append").append("This is text appended")
+
+            $("#getterHTML").click(function(){
+                var htmlGetterString = $( this ).html()
+                alert(htmlGetterString)
+            })
+
+            $("#getterText").click(function(){
+                var textGetterString = $( this ).text()
+                alert(textGetterString)
+            })
+
+            $("#setterHTML").html( "<span class='red'>Hello <b>Again</b></span>")
+
+            $("#setterText").text(" This is appended text.")
+
+
+            function displayVals(){
+            var optionVal = $("#options").val() || []
+            $" <b>Multiple:</b> " + multipleValues.join( ", " )
+            }
+            $( "select" ).change( displayVals );
+            displayVals();
+
+        })
+    </script>
+
+  </head>
+  <body>
+
+    <h1>JQuery Functions</h1>
+    <hr class="big">
+    <br>
+    <h2>Hide and Show</h2>
+    <hr class="small">
+    <button type="button" name="hide">Hide</button>
+    <button type="button" name="show">Show</button>
+
+    <p class="no">Click "Hide" to hide me; Click "Show" to show me</p>
+    <p class="yes">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
+    <p class="yes">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.</p>
+    <p class="yes">Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam.</p>
+    <p class="yes">Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris.</p>
+    <p class="yes">Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet.</p>
+
+    <h2>Toggle</h2>
+    <hr class="small">
+    <br>
+    <h4 class="toggle">Click on me to see the effects of Toggle</h4>
+    <h4 class="toggle" style="display:none" >Click again to change the text back</h4>
+
+    <h2>Slides</h2>
+    <hr class="small">
+    <br>
+    <button type="button" name="slides" id="slideUp">Slides Up</button>
+    <button type="button" name="slides" id="slideDown">Slide Down</button>
+    <button type="button" name="slides" id="slideToggle">Slide Toggle</button>
+    <div class="slidesYellow"></div>
+    <div class="slidesYellow"></div>
+    <div class="slidesYellow"></div>
+    <div class="slidesGreen"></div>
+    <div class="slidesGreen"></div>
+    <div class="slidesGreen"></div>
+
+    <h2>FadeIn/Out</h2>
+    <hr class="small">
+    <br>
+    <button type="button" name="button" id="fadeInButton">Fade In</button>
+    <button type="button" name="button" id="fadeOutButton">Fade Out</button>
+
+    <h3 id="fadeInOutText">FadeIn/Out Effects</h3>
+
+    <h2>addClass</h2>
+    <hr class="small">
+    <br>
+    <p id="addClass">This is paragraph is originally black</p>
+
+    <h2>Before / After</h2>
+    <hr class="small">
+    <br>
+
+    <p id="beforeAfter">main body of text</p>
+
+    <h2>Append</h2>
+    <hr class="small">
+    <br>
+    <p id="append">main body of text</p>
+
+    <h2>HTML / Text>
+    <hr class="small">
+    <br>
+
+    <div id="getterHTML">
+    <button>HTML Getter Button</button>
+    </div>
+
+    <div id="getterText">
+    <button>Text Getter Button</button>
+    </div>
+
+    <div id="setterHTML">
+      <p>Orginal HTML</p>
+    </div>
+
+    <div id="setterText">
+      <p>Orginal Text</p>
+    </div>
+
+
+    <h2>Val</h2>
+    <hr class="small">
+    <br>
+    <select id="multiple" multiple="multiple">
+      <option selected="selected">Multiple</option>
+      <option>Multiple2</option>
+      <option selected="selected">Multiple3</option>
+    </select>
+
+  </body>
+</html>
