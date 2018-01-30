@@ -1,0 +1,66 @@
+body{
+  background-color: white;
+}
+
+.big{
+  height: 3px;
+  background-color: black;
+}
+
+#toggle{
+  visibility: visible;
+}
+
+#slides{
+  width: 200px;
+  height: 50px;
+  background-color: red;
+  display: block;
+}
+
+.slidesYellow{
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  margin: 10px;
+  display: inline-block;
+
+}
+
+.slidesGreen{
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  margin: 10px;
+  display: none;
+
+}
+
+#slideUp{
+  width: 100px;
+  height: 50px;
+  background-color: red;
+  display: inline-block;
+}
+
+#slideDown{
+  width: 100px;
+  height: 50px;
+  background-color: red;
+  display: inline-block;
+}
+
+#slideToggle{
+  width: 100px;
+  height: 50px;
+  background-color: red;
+  display: inline-block;
+}
+
+#fadeInOutText{
+  display: none;
+}
+
+.selected{
+  color: red;
+}
