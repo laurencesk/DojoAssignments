@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Disappearing Ninja</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $("document").ready(function(){
+
+            $("img").click(function(){
+                $(this).css("visibility","hidden")
+
+            })
+
+            $("button").click(function(){
+              $("img").css("visibility","visible")
+            })
+        })
+    </script>
+  </head>
+  <body>
+    <div id="container">
+        <img id="1"src="img/ninja.png" alt="">
+        <img id="2"src="img/ninja.png" alt="">
+        <img id="3"src="img/ninja.png" alt="">
+        <img id="4"src="img/ninja.png" alt="">
+        <img id="5"src="img/ninja.png" alt="">
+        <img id="6"src="img/ninja.png" alt="">
+        <img id="7"src="img/ninja.png" alt="">
+        <img id="8"src="img/ninja.png" alt=""
+
+        <button type="button" name="appear">All Ninjas Appear</button>
+
+    </div>
+    </div>
+  </body>
+</html>
