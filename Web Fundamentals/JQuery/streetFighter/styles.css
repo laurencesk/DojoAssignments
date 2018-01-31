@@ -1,0 +1,86 @@
+.{
+margin: 0;
+padding: 0;
+}
+
+#container{
+background-color: black;
+width: 1200px;
+height: 800px;
+border: 5px solid grey;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+#selectArena{
+margin: auto 0;
+width: 400px;
+height: 200px;
+background-color: grey;
+margin: 10px;
+text-align: center;
+padding: 5px 0px;
+margin-left: 400px;
+margin-top: 300px;
+}
+
+#selectPlayers{
+  display: none;
+  margin: auto 0;
+  width: 400px;
+  height: 200px;
+  background-color: grey;
+  margin: 10px;
+  text-align: center;
+  padding: 5px 0px;
+  margin-left: 400px;
+  margin-top: 250px;
+}
+
+
+h1{
+color: gold;
+}
+
+button{
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+select{
+font-size: 20px;
+margin: 10px;
+}
+
+#p1Img, #p2Img{
+  display: inline-block;
+  display: none;
+  vertical-align: bottom;
+    width: 200px;
+    height: auto;
+
+}
+
+
+#p1Img img{
+  margin-left: 200px;
+  margin-bottom: 20px;
+
+  width: 200px;
+height: auto;
+display: inline-block;
+position: absolute;
+}
+
+#p2Img img{
+  margin-bottom: 20px;
+  margin-left: 800px;
+  width: 200px;
+height: auto;
+display: inline-block;
+position: absolute;
+
+
+}
