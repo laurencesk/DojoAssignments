@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hover In/Out</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $("document").ready(function(){
+
+            $("img").hover(function(){
+                  $(this).attr("temp",$(this).attr("src"))
+                  $(this).attr("src",$(this).attr("altImg"))
+                  $(this).attr("altImg",$(this).attr("temp"))
+            })
+
+        });
+
+    </script>
+  </head>
+  <body>
+      <div id="container">
+          <img src="img/day1.png" altImg="img/night1.png">
+          <img src="img/day2.png" altImg="img/night2.png">
+          <img src="img/day3.png" altImg="img/night3.png">
+          <img src="img/day4.png" altImg="img/night4.png">
+
+
+      </div>
+  </body>
+</html>
