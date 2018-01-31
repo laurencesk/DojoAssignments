@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Street Fighters</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+
+          $("#beach").hover(function(){
+              $("#container").css("background-image","url('img/beach.jpg')")
+          })
+          $("#earth").hover(function(){
+              $("#container").css("background-image","url('img/earth.jpg')")
+          })
+          $("#dojo").hover(function(){
+              $("#container").css("background-image","url('img/dojo.jpg')")
+          })
+          $("#forest").hover(function(){
+              $("#container").css("background-image","url('img/forest.jpg')")
+          })
+          $("#matrix").hover(function(){
+              $("#container").css("background-image","url('img/matrix.jpg')")
+          })
+          $("#snow").hover(function(){
+              $("#container").css("background-image","url('img/snow.jpg')")
+          })
+
+
+      })
+
+      $(document).on("click","button",function(){
+          $("#container").css("background-image","url('img/"+$(this).attr("id")+".jpg')")
+          $("#selectArena").hide()
+          $("#selectPlayers").show()
+      })
+
+      $(document).on("change","#p1",function(){
+        $("#p1Img").html("<img id='p1Img' src='img/"+$("#p1").val()+".png'>")
+        $("#p1Img").show()
+
+
+      })
+
+      $(document).on("change","#p2",function(){
+        $("#p2Img").html("<img id='p2Img' src='img/"+$("#p2").val()+".png'>")
+        $("#p2Img").show()
+
+      })
+
+    </script>
+
+
+
+
+  </head>
+  <body>
+<div id="container">
+    <div id="selectArena">
+        <h1>Select Arena</h1>
+        <button type="button" id="beach">beach</button>
+        <button type="button" id="earth">planet</button>
+        <button type="button" id="dojo">dojo</button>
+        <button type="button" id="forest">forest</button>
+        <button type="button" id="matrix">matrix</button>
+        <button type="button" id="snow">snow</button>
+    </div>
+
+    <div id="selectPlayers">
+        <h1>Select Players</h1>
+        <select id="p1">
+          <option value="donny" id="choose">Choose Character</option>
+          <option value="donny" id="donny">Donny</option>
+            <option value="leo" id="leo">Leo</option>
+            <option value="mikey" id="miley">Mikey</option>
+            <option value="raphael" id="raphael">Raphael</option>
+        </select>
+        <select id="p2">
+          <option value="donny" id="choose">Choose Character</option>
+            <option value="donny" id="donny">Donny</option>
+            <option value="leo" id="leo">Leo</option>
+            <option value="mikey" id="miley">Mikey</option>
+            <option value="raphael" id="raphael">Raphael</option>
+        </select>
+    </div>
+
+    <div id="p1Img">
+      <img  src="img/leo.png" alt="">
+
+    </div>
+
+    <div id="p2Img">
+      <img  src="img/leo.png" alt="">
+
+    </div>
+
+
+</div>
+  </body>
+</html>
