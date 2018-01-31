@@ -1,0 +1,20 @@
+.card{
+width: auto;
+height: auto;
+background-color: #DCDCDC;
+border: 1px solid black;
+margin:15px;
+display: inline-block;
+text-align: center;
+padding: 10px;
+vertical-align: top;
+}
+
+
+.front{
+display: inline-block;
+}
+
+.back{
+display: none;
+}
