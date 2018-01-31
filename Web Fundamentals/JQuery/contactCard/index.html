@@ -3,21 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Contact Card</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
     $(document).ready(function(){
-
         $("#submit").click(function(){
-            $("#front").append('<h3>'+$('#firstNameForm').val()+" "+$('#lastNameForm').val()+'</h3>')
-            $("#back").append('<h3>'+$('#descriptionForm').val()+'</h3>')
+            $("#contact").append('<div class="card"><h2 class="front">'+$('#firstNameForm').val()+"</h2>"+" "+"<h2 class='front'>"+$('#lastNameForm').val()+'</h5><br class="front"><h5 class="front">Click for description!</h5><h3 class="back">'+$('#descriptionForm').val()+'</h3></dvi>')
             return false;
         })
-
     })
+        $(document).on("click",".card", function(){
+            $(this).children().toggle(".back")
+        })
+
+
     </script>
 
   </head>
-  <body>-
+  <body>
       <div id="container">
 
           <form id="form" class="" action="index.html" method="post">
@@ -30,16 +33,10 @@
               <input type="submit" id="submit" name="submit" value="Add User">
           </form>
 
-          <div id="card">
-              <div id="front">
-                  <h3 id="firstNameCard"></h3>
-                  <h3 id="lastNameCard"></h3>
-              </div>
-              <div id="back">
-                  <h3 id="descriptionCard"></h3>
-              </div>
+          <div id="contact">
 
           </div>
+
 
       </div>
   </body>
