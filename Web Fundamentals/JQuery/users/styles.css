@@ -1,0 +1,20 @@
+hr{
+width: 300px;
+}
+
+#form{
+width: 300px;
+
+}
+
+label{
+  font-weight: bold;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input{
+  display: inline-block;
+  margin: 0 5px;
+
+}
