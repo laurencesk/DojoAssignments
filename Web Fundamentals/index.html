@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Game of Thornes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            $("img").click(function(){
+                var alt = $(this).attr("alt")
+                  $.get("https://www.anapioficeandfire.com/api/houses?name="+alt,function(res){
+                    $("#info").html("<h2><h2>Name: </h2><br><h2>"+res[0].name+"</h2><br><h2>Words: </h2><br><h2>"+res[0].words+"</h2><br><h2>Titles: </h2><br><h2>"+res[0].titles+"</h2><br>")
+
+                    },"json")
+            })
+
+
+
+
+        })
+
+    </script>
+  </head>
+  <body>
+      <div id="container">
+          <img src="img/stark.jpg" id="stark" alt="House%20Stark%20of%20Winterfell">
+          <img src="img/targaryen.jpg" id="targaryen" alt="House Targaryen of King's Landing">
+          <img src="img/lannister.jpg" id="lannister" alt="House Lannister of Casterly Rock">
+          <img src="img/baratheon.png" id="baratheon" alt="House Baratheon of King's Landing">
+
+          <div id="info">
+
+          </div>
+
+      </div>
+  </body>
+</html>

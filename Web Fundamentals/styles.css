@@ -1,0 +1,26 @@
+img{
+width: 20%;
+height: auto;
+display: inline-block;
+vertical-align: top;
+margin: 2%;
+}
+
+#info{
+width: 70%;
+height: auto;
+background-color: lightgrey;
+margin: auto 10%;
+border: 1px black solid;
+display: inline-block;
+}
+
+#container{
+  margin: auto 0;
+
+}
+
+
+h2{
+  margin: 1%;
+}
