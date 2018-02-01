@@ -1,0 +1,40 @@
+#frame{
+width: 20%;
+height: 90%;
+border: 10px solid red;
+display: inline-block;
+vertical-align: top;
+padding: 20px;
+
+}
+
+#pokemon{
+  width: 75%;
+  display: inline-block;
+  align-items: center;
+}
+
+#container{
+display: inline-block;
+vertical-align: top;
+width: 100%;
+height: auto;
+}
+
+img{
+  width:10%;
+  height: auto;
+  margin: auto 0;
+  align-items: center;
+  text-align: center;
+
+}
+
+h2 ul li{
+  display: inline-block;
+}
+
+#image{
+  width: 50%;
+  height: auto;
+}
