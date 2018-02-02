@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pacman Demo</title>
+    <style media="screen">
+        body{
+          background-color: black;
+        }
+        div.row div{
+          width: 20px;
+          height: 20px;
+          border: 1px solid black;
+          display: inline-block;
+        }
+        div.brick{
+          background-color: blue;
+        }
+        div .coin{
+          background: url('img/Coin 4.gif');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
+        div#pacman{
+          background: url('img/pacman.gif');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          width: 20px;
+          height:20px;
+          position: absolute;
+        }
+        div.empty{
+
+
+        }
+    </style>
+  </head>
+  <body>
+<div id="container">
+  <div id="world"></div>
+  <div id="pacman" style="top:35px; left:35px"></div>
+</div>
+
+
+<script>
+
+    var world = [
+      [2,2,2,2,2,2,2,2,2,2,],
+      [2,1,1,2,1,1,1,1,1,2,],
+      [2,1,1,2,1,2,2,2,1,2,],
+      [2,1,1,2,1,2,1,2,1,2,],
+      [2,1,1,2,1,2,1,2,1,2,],
+      [2,1,1,2,2,2,1,2,1,2,],
+      [2,1,1,1,1,1,1,2,1,2,],
+      [2,1,1,1,1,1,1,1,1,2,],
+      [2,2,2,2,2,2,2,2,2,2,],
+    ];
+
+    function displayWorld(){
+        var output = "";
+
+        for(var i=0; i<world.length; i++){
+            output += "\n<div class='row'>";
+            for(var j=0; j<world[i].length; j++)
+                if(world[i][j] == 2){
+                    output += "\n\t<div class='brick'></div>"
+                  }
+                else if(world[i][j] == 1){
+                    output += "\n\t<div class='coin'></div>"
+                  }
+                else if(world[i][j] == 0){
+                    output += "\n\t<div class='empty'></div>"
+                  }
+            output+= "\n</div>"
+        }
+        document.getElementById('world').innerHTML = output;
+    }
+    displayWorld()
+
+    document.onKeyDown = function(e){
+        if(e==37){
+
+        }
+
+
+    }
+
+
+
+
+</script>
+
+
+  </body>
+</html>
