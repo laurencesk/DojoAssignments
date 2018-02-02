@@ -36,6 +36,16 @@
           background-size: cover;
         }
 
+        div#ghost{
+          background: url('img/ghost.png');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          width: 20px;
+          height:20px;
+          position: absolute;
+        }
+
         div#pacman{
           background: url('img/pacman.gif');
           background-repeat: no-repeat;
@@ -73,8 +83,7 @@
 <div id="container">
   <div id="world"></div>
   <div id="pacman"></div>
-  <div id="mushroom">
-  </div>
+  <div id="mushroom"></div>
   <div id="score">0</div>
 
 </div>
@@ -84,20 +93,20 @@
     var world = [
       [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
       [2,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
-      [2,1,1,1,1,2,1,2,2,2,2,2,2,1,1,1,2,2,1,2],
+      [2,1,2,1,1,2,1,2,2,2,2,2,2,1,1,1,2,2,1,2],
       [2,1,1,2,1,2,1,2,1,1,1,1,1,2,1,1,2,1,1,2],
+      [2,1,2,2,1,2,1,2,1,1,2,1,1,2,1,1,2,1,1,2],
       [2,1,1,2,1,2,1,2,1,1,2,1,1,2,1,1,2,1,1,2],
-      [2,1,1,2,1,2,1,2,1,1,2,1,1,2,1,1,2,1,1,2],
-      [2,1,1,2,1,2,1,2,1,1,2,1,1,2,2,2,2,1,1,2],
+      [2,1,2,2,1,2,1,2,1,1,2,1,1,2,2,2,2,1,1,2],
       [2,1,1,2,1,1,2,2,1,1,2,1,1,1,1,1,1,1,1,2],
-      [2,1,1,2,1,1,2,2,1,1,2,1,1,1,1,1,1,1,1,2],
-      [2,1,1,2,1,1,2,2,1,1,2,1,1,1,1,1,1,1,1,2],
-      [2,1,1,2,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,2],
-      [2,1,1,2,1,2,2,1,1,1,1,1,2,1,1,1,1,1,1,2],
-      [2,1,1,2,1,1,2,2,2,2,2,2,2,1,1,1,1,1,1,2],
-      [2,1,1,2,1,1,2,2,1,1,1,1,2,1,1,1,1,1,1,2],
-      [2,1,1,2,1,1,2,2,1,2,2,1,2,1,1,1,1,1,1,2],
-      [2,1,1,2,1,1,2,2,1,2,2,1,1,1,1,1,1,1,1,2],
+      [2,1,2,2,1,1,2,2,1,1,2,1,1,1,1,1,2,1,1,2],
+      [2,1,1,2,1,1,2,2,1,1,2,1,1,1,1,2,2,1,1,2],
+      [2,1,2,2,1,1,2,2,1,1,1,1,1,1,1,2,1,1,1,2],
+      [2,1,1,2,1,2,2,1,1,1,1,1,2,1,1,2,2,1,1,2],
+      [2,1,2,2,1,1,2,2,2,2,2,2,2,1,1,1,2,1,1,2],
+      [2,1,1,2,2,1,2,2,1,1,1,1,2,1,1,2,2,1,1,2],
+      [2,1,2,2,2,1,2,2,1,2,2,1,2,1,1,2,1,1,1,2],
+      [2,1,1,2,2,1,2,2,1,2,2,1,1,1,1,2,2,1,1,2],
       [2,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,2],
       [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
     ];
@@ -107,12 +116,22 @@
       y:1
     }
 
+    // var ghost = {
+    //   x: 5,
+    //   y: 3
+    // }
+
     var score = 0
 
     function displayPacman(){
       document.getElementById('pacman').style.top = pacman.y*20+"px"
       document.getElementById('pacman').style.left = pacman.x*20+"px"
     }
+
+    // function displayGhsot(){
+    //   document.getElementById('ghost').style.top = ghost.y*20+"px"
+    //   document.getElementById('ghost').style.left = ghost.x*20+"px"
+    // }
 
     function changeScore(){
       document.getElementById('score').innerHTML = score;
@@ -124,10 +143,9 @@
     }
 
     function mushroom(){
-      console.log(world.length)
       for(var i = 0; i<randomIntFromInterval(1,world.length-1);i++){
         for(var j =0 ; j<randomIntFromInterval(1,world[i].length-1);j++){
-            if(world[i][j] !=2 && world[i][j] !=1 && randomIntFromInterval(1,300) == 5){
+            if(world[i][j] !=2 && world[i][j] !=1 && randomIntFromInterval(1,200) == 5 && countMashroom() <3 ){
                 world[i][j] = 3
               }
             else {
@@ -138,6 +156,7 @@
     }
 
     displayPacman()
+    // displayGhsot()
 
     function displayWorld(){
         var output = "";
@@ -156,11 +175,27 @@
                 else if(world[i][j] == 3){
                     output += "<div class='mushroom'></div>"
                   }
+                else if(world[i][j] == 4){
+                    output += "<div id='ghost'></div>"
+                  }
             output+= "</div>"
         }
         document.getElementById('world').innerHTML = output;
     }
     displayWorld()
+
+    function countMashroom(){
+      var count = 0
+        for(var i = 0; i<world.length;i++){
+            for(var j =0 ; j<world[i].length;j++){
+                if(world[i][j]==3){
+                count++
+              }
+            }
+        }
+        return count
+    }
+
 
     document.onkeydown = function(e){
         if(e.keyCode == 40 && world[pacman.y+1][pacman.x] != 2){
@@ -198,6 +233,24 @@
     }
 
 
+function showGhost(){
+  for(var i = 0; i<world.length;i++){
+    for(var j =0 ; j<world[i].length;j++){
+        for(var k=0; k<1; k++){
+        if(world[i][j] !=2){
+            world[i][j] = 4
+            var d1 = document.getElementById("container");
+            d1.insertAdjacentHTML('afterend',"<div id='ghost'></div>");
+            break
+          }
+          }
+
+      }
+  }
+
+}
+
+setTimeout(showGhost,5000);
 
 </script>
 
