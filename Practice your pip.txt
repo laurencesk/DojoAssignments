@@ -1,0 +1,55 @@
+
+pip install Django==1.11.9
+
+C:\Users\laure>pip install Django
+Collecting Django
+  Downloading Django-1.11.10-py2.py3-none-any.whl (6.9MB)
+    100% |################################| 7.0MB 201kB/s
+Collecting pytz (from Django)
+  Downloading pytz-2017.3-py2.py3-none-any.whl (511kB)
+    100% |################################| 512kB 1.1MB/s
+Installing collected packages: pytz, Django
+Successfully installed Django-1.11.10 pytz-2017.3
+
+
+pip list
+
+this command lists installed packages
+click (6.7)
+Django (1.11.10)
+Flask (0.12.2)
+itsdangerous (0.24)
+Jinja2 (2.10)
+MarkupSafe (1.0)
+pip (9.0.1)
+pytz (2017.3)
+setuptools (28.8.0)
+Werkzeug (0.14.1)
+
+
+
+pip install Django==1.11.9
+Collecting Django
+Requirement already satisfied: pytz in c:\python27\lib\site-packages (from Django)
+Execute installation again results in a message indicating that I already have the package.
+
+pip freeze
+this command drops a requirement.txt file into the folder with the list of packages shown below
+click==6.7
+Django==1.11.10
+Flask==0.12.2
+itsdangerous==0.24
+Jinja2==2.10
+MarkupSafe==1.0
+pytz==2017.3
+Werkzeug==0.14.1
+
+pip uninstall Django
+uninstall Django
+
+pip show Django
+Nothing shows up after uninstallation
+
+
+pip search Flask. This one might take a moment to execute.
+This command let's user to search the specified packgage in the package database.
