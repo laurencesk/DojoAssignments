@@ -34,6 +34,8 @@
           background-repeat: no-repeat;
           background-position: center;
           background-size: cover;
+          width: 20px;
+          height:20px;
         }
 
         div#ghost{
@@ -43,7 +45,7 @@
           background-size: cover;
           width: 20px;
           height:20px;
-          position: absolute;
+          position:absolute;
         }
 
         div#pacman{
@@ -56,6 +58,8 @@
           position: absolute;
         }
         div.empty{
+          width: 20px;
+          height:20px;
         }
 
         div.row{
@@ -83,7 +87,7 @@
 <div id="container">
   <div id="world"></div>
   <div id="pacman"></div>
-  <div id="mushroom"></div>
+  <div class="mushroom"></div>
   <div id="score">0</div>
 
 </div>
@@ -116,11 +120,6 @@
       y:1
     }
 
-    // var ghost = {
-    //   x: 5,
-    //   y: 3
-    // }
-
     var score = 0
 
     function displayPacman(){
@@ -142,15 +141,16 @@
         return Math.floor(min + Math.random()*(max+1 - min));
     }
 
+    var countMashroom = 0
+
     function mushroom(){
-      for(var i = 0; i<randomIntFromInterval(1,world.length-1);i++){
-        for(var j =0 ; j<randomIntFromInterval(1,world[i].length-1);j++){
-            if(world[i][j] !=2 && world[i][j] !=1 && randomIntFromInterval(1,200) == 5 && countMashroom() <3 ){
-                world[i][j] = 3
-              }
-            else {
-              continue;
-            }
+      while(countMashroom<3 && randomIntFromInterval(1,50) == 1){
+        var i = randomIntFromInterval(1,world.length-1)
+        var j = randomIntFromInterval(1,world.length-1)
+        if(world[i][j] !=2 && world[i][j] !=1 && countMashroom <3 ){
+            world[i][j] = 3
+            countMashroom++
+            break
         }
       }
     }
@@ -162,7 +162,7 @@
         var output = "";
         for(var i=0; i<world.length; i++){
             output += "<div class='row'>";
-            for(var j=0; j<world[i].length; j++)
+            for(var j=0; j<world[i].length; j++){
                 if(world[i][j] == 2){
                     output += "<div class='brick'></div>"
                   }
@@ -175,27 +175,16 @@
                 else if(world[i][j] == 3){
                     output += "<div class='mushroom'></div>"
                   }
-                else if(world[i][j] == 4){
-                    output += "<div id='ghost'></div>"
-                  }
+                // else if(world[i][j] == 4){
+                //     output += "<div id='ghost'></div>"
+                    ghostReady = 1
+                  // }
+                }
             output+= "</div>"
         }
         document.getElementById('world').innerHTML = output;
     }
     displayWorld()
-
-    function countMashroom(){
-      var count = 0
-        for(var i = 0; i<world.length;i++){
-            for(var j =0 ; j<world[i].length;j++){
-                if(world[i][j]==3){
-                count++
-              }
-            }
-        }
-        return count
-    }
-
 
     document.onkeydown = function(e){
         if(e.keyCode == 40 && world[pacman.y+1][pacman.x] != 2){
@@ -224,8 +213,16 @@
         if(world[pacman.y][pacman.x] == 3){
             world[pacman.y][pacman.x] = 0
             score+=50
+            countMashroom--
             changeScore()
         }
+
+        if(world[pacman.y][pacman.x] == 4){
+            world[pacman.y][pacman.x] = 0
+            alert("You Lost")
+        }
+
+
             mushroom()
             displayPacman()
             displayWorld()
@@ -233,24 +230,100 @@
     }
 
 
-function showGhost(){
-  for(var i = 0; i<world.length;i++){
-    for(var j =0 ; j<world[i].length;j++){
-        for(var k=0; k<1; k++){
-        if(world[i][j] !=2){
-            world[i][j] = 4
-            var d1 = document.getElementById("container");
-            d1.insertAdjacentHTML('afterend',"<div id='ghost'></div>");
-            break
-          }
-          }
 
-      }
-  }
+    var ghost = {
+      x: "",
+      y: ""
+    }
+
+    var ghostCount = 0;
+    var ghostReady = 0
+    function showGhost(){
+        while(ghostCount<1){
+            var i = randomIntFromInterval(1,world.length-1)
+            var j = randomIntFromInterval(1,world.length-1)
+            if(world[i][j] !=2 && world[i][j] !=1){
+                // world[i][j] = 4
+                var d1 = document.getElementById("container");
+                d1.insertAdjacentHTML('afterend',"<div id='ghost'></div>");
+                ghost.x = i
+                ghost.y = j
+                ghostCount++
+                //ghostReady = 1
+              }
+          }
+    }
+
+
+
+function displayGhost(){
+  // console.log("y:" + ghost.y)
+  // console.log("x:" + ghost.x)
+  document.getElementById('ghost').style.top = ghost.y*20+"px"
+  document.getElementById('ghost').style.left = ghost.x*20+"px"
 
 }
 
-setTimeout(showGhost,5000);
+function ghostMove(){
+    var direction = randomIntFromInterval(1,4)
+    if(direction ==1 && world[ghost.y+1][ghost.x] != 2){
+      while(world[ghost.y+1][ghost.x] != 2)
+      {
+        ghost.y++
+        displayGhost()
+        setInterval(function(){}, 1000);
+        console.log("1",ghost.x,ghost.y)
+      }
+    }
+    else if(direction ==2 &&world[ghost.y-1][ghost.x] != 2){
+      while(world[ghost.y-1][ghost.x] != 2)
+      {
+        ghost.y--
+        displayGhost()
+        setInterval(function(){}, 1000);
+        console.log("2",ghost.x,ghost.y)
+
+      }
+    }
+    else if(direction ==3　&& world[ghost.y][ghost.x+1] != 2){
+      while(world[ghost.y][ghost.x+1] != 2)
+      {
+        ghost.x++
+        displayGhost()
+        setInterval(function(){}, 1000);
+        console.log("3",ghost.x,ghost.y)
+
+
+      }
+    }
+    else if(direction ==4 &&　world[ghost.y][ghost.x-1] != 2){
+      while(world[ghost.y][ghost.x-1] != 2)
+      {
+        ghost.x--
+        displayGhost()
+        setInterval(function(){}, 1000);
+        console.log("4",ghost.x,ghost.y)
+
+
+      }
+    }
+    // displayGhost()
+}
+
+var ghostCanMove = 0
+
+setTimeout(function callGhost() {
+  if(ghostReady == 1){
+    showGhost()
+    ghostCanMove = 1
+  }
+}, 5000);
+
+setInterval(function callGhost() {
+    if(ghostCanMove ==1){
+      ghostMove()
+    }
+}, 1000);
 
 </script>
 
