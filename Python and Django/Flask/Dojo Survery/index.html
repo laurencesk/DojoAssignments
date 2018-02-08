@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        #container{
+            width: 200px;
+            height: 300px;
+            border: 3px solid black;
+        }
+        input{
+            display: block;
+            margin: 5px;
+        }
+        form{            
+            margin: auto 0;
+            width: 200px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+            <form action="/response", method="post">
+                Your Name: <input type="text" name="name" id="">
+                Dojo Location: <input type="text" name="location" id="">
+                Favorite Language: <input type="text" name="language" id="">
+                Comment(optional): <input type="textarea" name="comment" id="">
+                 <input type="submit" name="button" id="">
+            </form>        
+    </div>
+
+
+</body>
+</html>
